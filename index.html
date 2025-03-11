@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RebootMe</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>RebootMe</h1>
+    <p>Track your device usage, level up, and earn rewards!</p>
+  </header>
+
+  <nav>
+    <button onclick="showPage('main')">Main Page</button>
+    <button onclick="showPage('redeem')">Redeem Coupons</button>
+    <button onclick="showPage('shop')">In-Game Shop</button>
+  </nav>
+
+  <!-- Main Page -->
+  <div id="main" class="page active">
+    <div class="container">
+      <div class="avatar-section">
+        <h2>Your Avatar</h2>
+        <div class="avatar" id="avatar">
+          <img src="https://via.placeholder.com/150" alt="Avatar" id="avatar-image">
+        </div>
+      </div>
+      <div class="points-section">
+        <h3>Your Points</h3>
+        <div class="points" id="points">0</div>
+        <div class="level-tracker">
+          <h3>Level: <span id="level">1</span></h3>
+        </div>
+        <div class="crown" id="crown" style="display: none;">👑 You are the top achiever!</div>
+      </div>
+
+      <div class="actions">
+        <button onclick="shareOnSocialMedia()">Share on Instagram/Facebook</button>
+        <button onclick="simulateInactivity()">Simulate Inactivity</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Redeem Coupons Page -->
+  <div id="redeem" class="page">
+    <div class="container">
+      <h2>Redeem Coupons</h2>
+      <div class="coupons">
+        <div class="coupon">
+          <h3>Capitaland</h3>
+          <p>Redeem $10 voucher for 50 points</p>
+          <button onclick="redeemCoupon(50)">Redeem</button>
+        </div>
+        <div class="coupon">
+          <h3>Popular</h3>
+          <p>Redeem $5 voucher for 30 points</p>
+          <button onclick="redeemCoupon(30)">Redeem</button>
+        </div>
+        <div class="coupon">
+          <h3>Cathay</h3>
+          <p>Redeem 1 movie ticket for 40 points</p>
+          <button onclick="redeemCoupon(40)">Redeem</button>
+        </div>
+        <div class="coupon">
+          <h3>LiHo</h3>
+          <p>Redeem 1 free drink for 20 points</p>
+          <button onclick="redeemCoupon(20)">Redeem</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- In-Game Shop Page -->
+  <div id="shop" class="page">
+    <div class="container">
+      <h2>In-Game Shop</h2>
+      <div class="shop-items">
+        <div class="shop-item">
+          <h3>Cool Hat</h3>
+          <p>Cost: 20 points</p>
+          <button onclick="buyItem('hat', 20)">Buy</button>
+        </div>
+        <div class="shop-item">
+          <h3>Stylish Shirt</h3>
+          <p>Cost: 30 points</p>
+          <button onclick="buyItem('shirt', 30)">Buy</button>
+        </div>
+        <div class="shop-item">
+          <h3>Fancy Pants</h3>
+          <p>Cost: 40 points</p>
+          <button onclick="buyItem('pants', 40)">Buy</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal for Response Messages -->
+  <div id="response-modal" class="modal">
+    <div class="modal-content" id="modal-content">
+      <p id="modal-message"></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+/* General Styles */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #e8f5e9; /* Light green */
+}
+
+header {
+  background-color: #388e3c; /* Dark green */
+  color: #ffffff;
+  text-align: center;
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  background-color: #2e7d32; /* Medium green */
+  padding: 10px;
+}
+
+nav button {
+  background-color: #66bb6a; /* Light green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  margin: 0 10px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+nav button:hover {
+  background-color: #4caf50; /* Slightly darker green */
+}
+
+.container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.points-section, .avatar-section, .shop-items {
+  text-align: center;
+}
+
+.points {
+  font-size: 3em;
+  color: #388e3c; /* Dark green */
+  font-weight: bold;
+}
+
+.level-tracker h3 {
+  font-size: 1.5em;
+  color: #2e7d32; /* Medium green */
+}
+
+.crown {
+  font-size: 1.5em;
+  color: #66bb6a; /* Light green */
+  margin-top: 10px;
+}
+
+.avatar img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  border: 3px solid #388e3c; /* Dark green */
+}
+
+.shop-item {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+  border: 1px solid #388e3c; /* Dark green */
+  border-radius: 10px;
+  background-color: #f1f8e9; /* Very light green */
+  text-align: center;
+}
+
+.shop-item button {
+  background-color: #388e3c; /* Dark green */
+  color: #ffffff;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.shop-item button:hover {
+  background-color: #2e7d32; /* Medium green */
+}
+
+.actions button {
+  background-color: #388e3c; /* Dark green */
+  color: #ffffff;
+  border: none;
+  padding: 15px 30px;
+  margin: 10px;
+  font-size: 1em;
+  font-weight: bold;
+  border-radius: 25px; /* Rounded buttons */
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.actions button:hover {
+  background-color: #2e7d32; /* Slightly darker green */
+  transform: translateY(-2px); /* Lift effect */
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.page {
+  display: none;
+}
+
+.page.active {
+  display: block;
+}
+
+/* Modal Styles */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content p {
+  font-size: 1.2em;
+  color: #388e3c; /* Dark green */
+  font-weight: bold;
+}
+
+/* Fade-In Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
